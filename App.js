@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import Expo from 'expo';
 
+import * as firebase from 'firebase';
+
 import MainScreen from './js/config/Navigation'
 
 class App extends PureComponent {
@@ -28,3 +30,13 @@ class App extends PureComponent {
 }
 
 export default App;
+
+const config = {
+  apiKey: "AIzaSyA1N3Dsxj5yjVdO4CoJh12pSNZ_OU0PuCY",
+  authDomain: "telecom-hackathon.firebaseapp.com",
+  databaseURL: "https://telecom-hackathon.firebaseio.com",
+  projectId: "telecom-hackathon",
+  storageBucket: "telecom-hackathon.appspot.com",
+  messagingSenderId: "1087780000567"
+};
+firebase.initializeApp(config);
