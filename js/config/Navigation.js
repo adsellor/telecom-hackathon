@@ -6,12 +6,11 @@ import HomeScreen from '../screens/Home';
 
 const MainScreen = new StackNavigator({
     Home: {
-        screen: HomeScreen,
-        
-    },
+        screen: HomeScreen,  
+    }
 }, {
     navigationOptions: {
-        header: null
+        header: null,
     }
 })
 
