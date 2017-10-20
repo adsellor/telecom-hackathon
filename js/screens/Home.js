@@ -7,7 +7,7 @@ class HomeScreen extends PureComponent {
     render() {
         return (
             <Container>
-                <DefaultHeader name='Home' />
+                <DefaultHeader onPress={() => this.props.navigation.navigate('DrawerOpen')} name='Home' />
                 <Button light><Text>Watch Ads</Text></Button>
                 <Button light><Text>Marketplace</Text></Button>
             </Container>
