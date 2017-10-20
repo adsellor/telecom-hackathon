@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { Container, Left, Header, Icon, Body, Title } from 'native-base';
+import { Left, Header, Icon, Body, Title } from 'native-base';
 
 type IHeaderProps = {
     name: string,
@@ -22,3 +22,5 @@ const DefaultHeader = (props: IHeaderProps) => {
             </Header>
     )
 }
+
+export default DefaultHeader;

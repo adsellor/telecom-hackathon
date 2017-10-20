@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import MainScreen from './src/config/navigation'
+import MainScreen from './js/config/Navigation'
 
-export default () => {
-  return <MainScreen />
-}
+const App = () => {
+  return <MainScreen/>
+} 
+
+export default App;

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Container } from 'native-base';
 
 import DefaultHeader from '../components/header';
 
