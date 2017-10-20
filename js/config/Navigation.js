@@ -1,17 +1,22 @@
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import { Drawer } from 'native-base';
+
 import React from 'react';
 
 import HomeScreen from '../screens/Home';
+import SideBar from '../components/sideBar';
+import MarketPlace from '../screens/MarketPlace/index';
 
-
-const MainScreen = new StackNavigator({
+const MainScreen = new DrawerNavigator({
     Home: {
-        screen: HomeScreen,  
+        screen: HomeScreen
+    },
+    Marketplace: {
+        screen: MarketPlace
     }
 }, {
-    navigationOptions: {
-        header: null,
-    }
+    contentComponent: props => <SideBar {...props} />
 })
+
 
 export default MainScreen;
