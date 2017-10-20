@@ -1,31 +1,20 @@
 import React from "react";
 import { AppRegistry, Image, StatusBar } from "react-native";
 import { Container, Content, Text, List, ListItem } from "native-base";
-const routes = ["Home"];
+const routes = ["Home", "Marketplace"];
 export default class SideBar extends React.Component {
   render() {
     return (
-      <Container>
+      <Container style={{
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        marginTop: 100,
+      }}>
         <Content>
-          <Image
-            source={{
-              uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/drawer-cover.png"
-            }}
-            style={{
-              height: 120,
-              alignSelf: "stretch",
-              justifyContent: "center",
-              alignItems: "center"
-            }}>
-            <Image
-              square
-              style={{ height: 80, width: 70 }}
-              source={{
-                uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/logo.png"
-              }}
-            />
-          </Image>
           <List
+            style={{
+              width: 800,
+            }}
             dataArray={routes}
             renderRow={data => {
               return (
