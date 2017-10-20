@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Container, Text } from 'native-base';
+import { Container, Text, Button } from 'native-base';
 
 import DefaultHeader from '../components/header';
 
@@ -8,6 +8,8 @@ class HomeScreen extends PureComponent {
         return (
             <Container>
                 <DefaultHeader name='Home' />
+                <Button light><Text>Watch Ads</Text></Button>
+                <Button light><Text>Marketplace</Text></Button>
             </Container>
         )
     }
