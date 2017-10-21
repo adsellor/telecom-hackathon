@@ -1,6 +1,6 @@
 import React from "react";
 import { AppRegistry, Image, StatusBar } from "react-native";
-import { Container, Content, Text, List, ListItem } from "native-base";
+import { Container, Content, Text, List, ListItem, Footer, FooterTab, Button, Right } from "native-base";
 const routes = ["Home", "Marketplace"];
 export default class SideBar extends React.Component {
   render() {
@@ -27,6 +27,15 @@ export default class SideBar extends React.Component {
             }}
           />
         </Content>
+        <Footer>
+          <FooterTab>
+            <Button style={{
+              backgroundColor: '#1976D2'
+            }} full>
+              <Text>MIT Licence</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
