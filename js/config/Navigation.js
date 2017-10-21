@@ -10,7 +10,7 @@ import VideoScreen from '../screens/Video';
 import AuthScreen from '../screens/AuthScreen/index'
 
 const MainScreen = new DrawerNavigator({
-    LoginScreen: {
+    Exit: {
         screen: AuthScreen
     },
     Home: {

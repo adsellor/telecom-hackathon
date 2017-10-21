@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#d1e6fc',
+        borderRadius: 10,
         marginLeft: 10,
         marginTop: 10,
         marginRight: 10,         
@@ -48,8 +49,8 @@ const styles = StyleSheet.create({
         color: '#687583'
     },
     button: {
-        height: 75,
-        borderRadius: 500,
+        height: 50,
+        borderRadius: 10,
         margin: 5,
         backgroundColor: '#1976D2'  
     },
@@ -116,8 +117,8 @@ class HomeScreen extends PureComponent {
                         )}
                     </CardItem>
                 </Card>
-                <Button style={styles.button} onPress={() => this.props.navigation.navigate('Video')} full light><Text>Watch Ads</Text></Button>
-                <Button style={styles.button} full light><Text>Marketplace</Text></Button>
+                <Button style={styles.button} onPress={() => this.props.navigation.navigate('Video')} full light><Text style={styles.buttonText}>Watch Ads</Text></Button>
+                <Button style={styles.button} full light><Text style={styles.buttonText}>Marketplace</Text></Button>
             </Container>
         )
     }
