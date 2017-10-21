@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import Expo from 'expo';
 
+import * as firebase from 'firebase';
+
 import MainScreen from './js/config/Navigation'
 
 class App extends PureComponent {
