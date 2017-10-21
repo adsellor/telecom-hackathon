@@ -1,8 +1,16 @@
 import React, { PureComponent } from 'react';
 import { Body, Container, Text, Button, Card, CardItem } from 'native-base';
-import { StyleSheet, TouchableOpacity } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 
 import DefaultHeader from '../components/header';
+
+const renderIf = (condition, content) => {
+    if (condition) {
+        return content;
+    } else {
+        return null;
+    }
+}
 
 const styles = StyleSheet.create({
     card: {
@@ -28,25 +36,22 @@ const styles = StyleSheet.create({
 })
 
 class HomeScreen extends PureComponent {
-    constructor(props) {
-        super(props)
-        this.state = {
-            amd: 1000,
-            points: 15,
-            displayAmd: true,
-        }
+    state = {
+        amd: 1000,
+        points: 15,
+        displayAmd: true,
     }
 
-    handleAmdChange() {
-        this.setState({
+    handleAmdChange = () => {
+        this.setState(state => ({
             displayAmd: true
-        })
+        }))
     }
 
-    handlePointChange() {
-        this.setState({
+    handlePointsChange = () => {
+        this.setState(state => ({
             displayAmd: false
-        })
+        }))
     }
 
     render() {
@@ -60,24 +65,28 @@ class HomeScreen extends PureComponent {
                         </Text>
                     </CardItem>
                     <CardItem>
-                        <TouchableOpacity onPress={() => this.handleAmdChange}>
+                        <TouchableOpacity onPress={this.handleAmdChange}>
                             <Text style={styles.type}>
                                 AMD
-                        </Text>
+                            </Text>
                         </TouchableOpacity>
                         <Text style={styles.type}>
                             /
                         </Text>
-                        <TouchableOpacity onPress={() => this.handlePointChange}>
+                        <TouchableOpacity onPress={this.handlePointsChange}>
                             <Text style={styles.type} >
                                 Points
-                        </Text>
+                            </Text>
                         </TouchableOpacity>
                     </CardItem>
                     <CardItem>
-                        <Text style={styles.numeric}>
-                            {this.state.amd ? this.state.amd : this.state.points}
-                        </Text>
+                        {renderIf(this.state.displayAmd, 
+                            <Text>{this.state.amd}</Text>
+                        )}
+                        
+                        {renderIf(!this.state.displayAmd,
+                            <Text>{this.state.points}</Text>
+                        )}
                     </CardItem>
                 </Card>
                 <Button style={styles.button} onPress={() => this.props.navigation.navigate('Video')} full light><Text>Watch Ads</Text></Button>
