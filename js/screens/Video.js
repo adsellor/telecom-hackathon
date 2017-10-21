@@ -20,7 +20,7 @@ export default class VideoScreen extends PureComponent {
                         rate={1.0}
                         volume={1.0}
                         muted={false}
-                        resizeMode="fill"
+                        resizeMode="contain"
                         shouldPlay
                         style={{ flex: 1 }}
                     />
