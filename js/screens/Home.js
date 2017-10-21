@@ -21,17 +21,27 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#d1e6fc',
+        backgroundColor: '#d9dde7',
         borderRadius: 10,
         marginLeft: 10,
         marginTop: 10,
-        marginRight: 10,         
+        marginRight: 10,
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        borderBottomColor: '#1976D2',
+        borderTopColor: '#1976D2',
+        borderLeftColor: '#1976D2',
+        borderRightColor: '#1976D2', 
+        shadowColor: '#000',
+        shadowOffset: {width: 10, height: 10},
+        
     },
     balance: {
         backgroundColor: '#d1e6fc'
     },
     balanceText: {
-        letterSpacing: 5,
         fontStyle: 'italic',
         fontSize: 36,
         color: '#687583'
@@ -42,7 +52,29 @@ const styles = StyleSheet.create({
     },
     typeText: {
          fontSize: 30,
-         color: '#687583'
+         color: '#687583',
+         marginLeft: 3,
+         marginRight: 3
+    },
+    border: {
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        borderBottomColor: '#1976D2',
+        borderTopColor: '#1976D2',
+        borderLeftColor: '#1976D2',
+        borderRightColor: '#1976D2',
+        padding: 15,
+    },
+    secondBorder: {
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomColor: '#1976D2',
+        borderTopColor: '#1976D2',
+        borderRightColor: '#1976D2',
+        padding: 15,
     },
     numericText: {
         fontSize: 24,
@@ -81,31 +113,37 @@ class HomeScreen extends PureComponent {
             displayAmd: false
         }))
     }
+    handleTimeOut = () => {
+        this.setState(state => ({
+            amd: 1100,
+            points: 16,
+        }))
+    }
+    componentDidMount() {
+        return setTimeout(this.handleTimeOut, 8000)
+    }
 
     render() {
         return (
             <Container>
                 <DefaultHeader onPress={() => this.props.navigation.navigate('DrawerOpen')} name='Home' />
                 <Card style={styles.card}>
-                    <CardItem style={styles.balance} header>
-                        <Text style={styles.balanceText}>
-                            BALANCE
-                        </Text>
-                    </CardItem>
                     <CardItem style={styles.type}>
-                        <TouchableOpacity onPress={this.handleAmdChange}>
+                        <TouchableOpacity onPress={this.handleAmdChange} style={styles.border}>
                             <Text style={styles.typeText}>
                                 AMD
                             </Text>
                         </TouchableOpacity>
-                        <Text style={styles.typeText}>
-                            /
-                        </Text>
-                        <TouchableOpacity onPress={this.handlePointsChange}>
+                        <TouchableOpacity onPress={this.handlePointsChange} style={styles.secondBorder}>
                             <Text style={styles.typeText} >
                                 Points
                             </Text>
                         </TouchableOpacity>
+                    </CardItem>
+                    <CardItem style={styles.balance} header>
+                        <Text style={styles.balanceText}>
+                            BALANCE
+                        </Text>
                     </CardItem>
                     <CardItem style={styles.points}>
                         {renderIf(this.state.displayAmd, 

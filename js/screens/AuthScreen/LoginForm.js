@@ -70,8 +70,6 @@ export default class LoginForm extends Component {
               buttonStyle={styles.loginButton}
               textStyle={styles.loginButtonText}
               text={'Log In'}
-              onButtonPress={() => this.props.navigation.navigate("Home")}
-
             />
           </View>
           <Text
