@@ -69,7 +69,7 @@ export default class LoginForm extends Component {
               isLoading={isLoading}
               buttonStyle={styles.loginButton}
               textStyle={styles.loginButtonText}
-              text={'Log In'}
+              text={'Log In'} 
             />
           </View>
           <Text

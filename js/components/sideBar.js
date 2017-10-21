@@ -5,7 +5,7 @@ const routes = ["Home", "Profile", "Marketplace", "Invite", "Exit"];
 
 const styles = StyleSheet.create({
   list: {
-    width: 260,
+    width: 350,
     backgroundColor: '#353839'
   },
   listItem: {

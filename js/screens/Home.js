@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Body, Container, Text, Button, Card, CardItem } from 'native-base';
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#d9dde7',
+        backgroundColor: '#dde7e5',
         borderRadius: 10,
         marginLeft: 10,
         marginTop: 10,
@@ -39,20 +39,19 @@ const styles = StyleSheet.create({
         
     },
     balance: {
-        backgroundColor: '#d1e6fc'
+        backgroundColor: '#dde7e5'
     },
     balanceText: {
-        fontStyle: 'italic',
         fontSize: 36,
         color: '#687583'
     },
     type: {
         margin: 5,
-        backgroundColor: '#d1e6fc'
+        backgroundColor: '#dde7e5'
     },
     typeText: {
          fontSize: 30,
-         color: '#687583',
+         color: '#1976D2',
          marginLeft: 3,
          marginRight: 3
     },
@@ -78,24 +77,24 @@ const styles = StyleSheet.create({
     },
     numericText: {
         fontSize: 24,
-        color: '#687583'
+        color: '#1976D2'
     },
     button: {
         height: 50,
         borderRadius: 10,
         margin: 5,
-        backgroundColor: '#1976D2'  
+        backgroundColor: '#1976D2'
     },
     buttonText: {
         color: '#fff'
     },
     points: {
-        backgroundColor: '#d1e6fc'
+        backgroundColor: '#dde7e5'
     }
 })
 
 
-class HomeScreen extends PureComponent {
+class HomeScreen extends Component {
     state = {
         amd: 1000,
         points: 15,
