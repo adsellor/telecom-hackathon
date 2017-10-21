@@ -19,9 +19,9 @@ class BuyScreen extends PureComponent {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={{uri: 'https://static.beeline.am/upload/contents/346/683x334%20ka%20ka%20chka.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
+                <Image source={{uri: 'https://static.beeline.am/upload/images/Home-600-195x139.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
                 <Text>
-                  Get 10 Mins of Free Calls
+                  Get 100 Mins of Free Calls with 1000pts
                 </Text>
               </Body>
             </CardItem>
@@ -38,9 +38,9 @@ class BuyScreen extends PureComponent {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={{uri: 'https://static.beeline.am/upload/contents/346/683x334%20ka%20ka%20chka.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
+                <Image source={{uri: 'https://static.beeline.am/upload/dpcupload/contents/342/SMS-715x350.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
                 <Text>
-                  Get 25 free text messages
+                  Get 25 free text messages With 500pts
                 </Text>
               </Body>
             </CardItem>
@@ -57,9 +57,9 @@ class BuyScreen extends PureComponent {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={{uri: 'https://static.beeline.am/upload/contents/346/683x334%20ka%20ka%20chka.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
+                <Image source={{uri: 'https://static.beeline.am/upload/dpcupload/contents/342/4G-LTE-715x350new.jpg'}} style={{height: 200, width: 200, flex: 1}}/>
                 <Text>
-                  Get 2GB of free data
+                  Get 2GB of free data with  800pts
                 </Text>
               </Body>
             </CardItem>
