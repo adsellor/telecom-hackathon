@@ -11,7 +11,10 @@ import AuthScreen from '../screens/AuthScreen/index'
 
 const MainScreen = new DrawerNavigator({
     Exit: {
-        screen: AuthScreen
+        screen: AuthScreen,
+        navigationOptions: {
+            drawerLockMode: 'locked-closed'
+        }
     },
     Home: {
         screen: HomeScreen
@@ -20,7 +23,10 @@ const MainScreen = new DrawerNavigator({
         screen: MarketPlace
     },
     Video: {
-        screen: VideoScreen
+        screen: VideoScreen,
+        navigationOptions: {
+            drawerLockMode: 'locked-closed'
+        }
     }
 }, {
     contentComponent: props => <SideBar {...props} />
