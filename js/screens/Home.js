@@ -118,7 +118,7 @@ class HomeScreen extends PureComponent {
                     </CardItem>
                 </Card>
                 <Button style={styles.button} onPress={() => this.props.navigation.navigate('Video')} full light><Text style={styles.buttonText}>Watch Ads</Text></Button>
-                <Button style={styles.button} onPress={() => this.props.naigation.navigate('Marketplace')} full light><Text style={styles.buttonText}>Marketplace</Text></Button>
+                <Button style={styles.button} onPress={() => this.props.navigation.navigate('Marketplace')} full light><Text style={styles.buttonText}>Marketplace</Text></Button>
             </Container>
         )
     }
