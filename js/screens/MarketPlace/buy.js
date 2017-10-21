@@ -56,8 +56,8 @@ class BuyScreen extends PureComponent {
                 <Text>
                   Get 100 Mins of Free Calls with 1000pts
                 </Text>
-                <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
               </Body>
+              <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
             </CardItem>
           </Modal>
           <TouchableOpacity  onPress={this._showModal2}>
@@ -96,8 +96,8 @@ class BuyScreen extends PureComponent {
                 <Text>
                   Get 25 free text messages With 500pts
                 </Text>
-                <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
               </Body>
+              <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
             </CardItem>
             </Modal>
             <TouchableOpacity onPress={this._showModal3}>
@@ -137,8 +137,8 @@ class BuyScreen extends PureComponent {
                 <Text>
                   Get 2GB of free data with  800pts
                 </Text>
-                <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
               </Body>
+              <Button onPress={this._hideModal} block primary><Text> Get </Text></Button>
             </CardItem>
             </Modal>
 
