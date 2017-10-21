@@ -18,7 +18,7 @@ class App extends PureComponent {
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
       Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf")
     });
-    
+
     this.setState({ isReady: true })
   }
   render() {
@@ -45,6 +45,23 @@ firebase.initializeApp(config);
 firebase.auth().onAuthStateChanged((user) => {
   if (user != null) {
     console.log("We are authenticated now!");
+    const { displayName, email, emailVerified, photoURL, uid, providerData } = user;
+    const dbRef = firebase.database().ref(`users/${uid}`);
+    dbRef.once('value')
+    .then( snapshot => {
+      const dataWritten = snapshot.val(); // Checking if user data is already in db
+      if(!dataWritten) {
+        dbRef.set({
+          username: email ? email.split('@')[0] : '',
+          password: userPassword || '',
+          created: moment().format('MMM D, YYYY'),
+          email: email || '',
+          uid: uid,
+          money: 0,
+          points: 0,
+        });
+      }
+    });
   }
 
   // Do other things
