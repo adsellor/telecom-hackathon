@@ -52,7 +52,7 @@ class HomeScreen extends PureComponent {
     render() {
         return (
             <Container>
-                <DefaultHeader name='Home' />
+                <DefaultHeader onPress={() => this.props.navigation.navigate('DrawerOpen')} name='Home' />
                 <Card style={styles.card}>
                     <CardItem header>
                         <Text style={styles.balance}>
@@ -80,7 +80,7 @@ class HomeScreen extends PureComponent {
                         </Text>
                     </CardItem>
                 </Card>
-                <Button style={styles.button} full light><Text>Watch Ads</Text></Button>
+                <Button style={styles.button} onPress={() => this.props.navigation.navigate('Video')} full light><Text>Watch Ads</Text></Button>
                 <Button style={styles.button} full light><Text>Marketplace</Text></Button>
             </Container>
         )
