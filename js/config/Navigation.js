@@ -7,8 +7,12 @@ import HomeScreen from '../screens/Home';
 import SideBar from '../components/sideBar';
 import MarketPlace from '../screens/MarketPlace/index';
 import VideoScreen from '../screens/Video';
+import AuthScreen from '../screens/AuthScreen/index'
 
 const MainScreen = new DrawerNavigator({
+    LoginScreen: {
+        screen: AuthScreen
+    },
     Home: {
         screen: HomeScreen
     },
